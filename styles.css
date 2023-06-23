@@ -1,3 +1,6 @@
+/******************************************************************************
+                        SITE
+******************************************************************************/
 /* FONTS  */
 body{
     font-family: "Lucida sans", Geneva, Verdana, sans-serif;
@@ -8,9 +11,8 @@ body{
 
 h1, h2, h3, h4, h5, h6{
     font-family:Georgia, 'Times New Roman', Times, serif
-    font-weight: 300;
+    font-weight:300;
 }
-
 h1{
     font-size: 40px;
     color: #004477;
@@ -42,6 +44,9 @@ h5{
     margin: 0px;
 }
 
+/******************************************************************************
+                        SITE
+******************************************************************************/
 /* DISPLAY */
 
     #info .left{
@@ -89,3 +94,43 @@ h5{
         width: 74%;
     }
     
+/******************************************************************************
+                        CONTACT
+******************************************************************************/
+
+.form-question{
+    margin: 20px 0;
+}
+
+.form-question label{
+    display: block;
+    margin-bottom:5px;
+}
+
+.form-question input, .form-question textarea {
+    width: 80vw;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.required label::after{
+    content:" *";
+    color:red;
+}
+#submit{
+    padding: 7px 15px;
+    background-color: #256ac4;
+    color: white;
+    border: 0;
+    box-shadow: 1px 2px #333;
+    border-radius: 4px;
+}
+
+#submit:hover{
+   background-color: white; 
+   color:#256ac4;
+   box-shadow: none;
+   border: 1px solid #256ac4;
+}
+
