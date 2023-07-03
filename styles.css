@@ -96,52 +96,74 @@ h5{
 /******************************************************************************
                         CV
 ******************************************************************************/
+.paper-background{
+    background-color: white;
+    max-width: 100opx;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#info, main{
+    padding: 0 20px;
+}
+
+#info{
+    margin: 30px auto;
+}
+
+#main{
+    margin: 0 auto;
+}
+#info h1{
+    margin: 0;
+}
+
+#info h2{
+    margin: 0;
+}
+
 /* DISPLAY */
 
-    #info .left{
-        display: inline-block;
-        width: 49%;
-        vertical-align: top;
-    }
+@media screen and (max-width:799px){
+  #info. left{
+    text-align: center;
+  }
+  #info .right{
+    text-align: center;
+    margin-top: 20px;
+  }
+  section .right{
+    margin: 20px;
+  }
+  section h3{
+    font-weight: bold;
+  }
+}
+   
+@media screen and (min-width:800px){   
+#info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-    #info .right{
-        display: inline-block;
-        width: 49%;
-    }
+#info .right{
+    align-self: end;
+    text-align: right;
+}
 
-    section .left{
-        display: inline-block;
-        width: 24%;
-        vertical-align: top;
-    }
+section{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+}
 
-    section .right{
-        display: inline-block;
-        width: 74%;
-    }
-
-    #info h1{
-        margin: 0;
-    }
-
-    #info h2{
-        margin: 0;
-    }
-
-    #info .right{
-        vertical-align: bottom;
-        text-align: right;
-    }
-
-    .work-title-right{
-        display: inline-block;
-        width: 24%
-    }
-
-    .work-title-left{
-        display: inline-block;
-        width: 74%;
-    }
+.work-item{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.work-item p{
+    grid-area: 2 / 1 / 3 / 3;
+}
 /******************************************************************************
                         PROJECTS
 ******************************************************************************/
@@ -153,8 +175,9 @@ h5{
 body {
     margin: 0;
     padding: 0;
-  }
-  .container {
+}
+
+.container {
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -162,104 +185,103 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 30px;
-  }
+}
   
-  .navbar {
+.navbar {
     background-color: grey;
     color: black;
     height: 60px;
-  }
+}
   
-  .navbar ul {
+.navbar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-  }
+}
   
-  .navbar li {
+.navbar li {
     margin-left: 20px;
     color: black;
-  }
+}
   
-  .navbar a {
+.navbar a {
     color: black;
     text-decoration: none;
     font-family:Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: bold;
-  }
+}
   
-  .logo {
+.logo {
     font-family:Arial, Helvetica, sans-serif;
     font-size: x-large;
     font-weight: bold;
-  }
+}
     
-  img {
+img {
     width: 100%;
     height: 300px;
     object-fit: cover;
-  }
+}
   
-  #flexbox-container{
+#flexbox-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    
-  }
-  .item {
+}
+
+.item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1px solid black;
-  }
+}
   
-  #grid-container img{
+#grid-container img{
     width: 100%;
     height: 150px;
     object-fit: cover;
     gap: 10px;
     margin: 1px solid black;
-  }
+}
   
- 
 /******************************************************************************
                         CONTACT
 ******************************************************************************/
 
 .contact-wrapper{
-    margin: 20px;
+   margin: 20px;
 }
 
 .form-question{
-    margin: 20px 0;
+   margin: 20px 0;
 }
 
 .form-question label{
-    display: block;
-    margin-bottom:5px;
+   display: block;
+   margin-bottom:5px;
 }
 
 .form-question input, .form-question textarea {
-    width: 80vw;
-    border: 1px solid #444;
-    border-radius: 5px;
-    padding: 5px 10px;
+   width: 80vw;
+   border: 1px solid #444;
+   border-radius: 5px;
+   padding: 5px 10px;
 }
 
 .required label::after{
-    content:" *";
-    color:red;
+   content:" *";
+   color:red;
 }
 #submit{
-    padding: 7px 15px;
-    background-color: #256ac4;
-    color: white;
-    border: 0;
-    box-shadow: 1px 2px #333;
-    border-radius: 4px;
+   padding: 7px 15px;
+   background-color: #256ac4;
+   color: white;
+   border: 0;
+   box-shadow: 1px 2px #333;
+   border-radius: 4px;
 }
 
 #submit:hover{
@@ -268,4 +290,3 @@ body {
    box-shadow: none;
    border: 1px solid #256ac4;
 }
-
